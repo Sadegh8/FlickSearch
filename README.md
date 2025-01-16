@@ -36,23 +36,3 @@ FlickSearch is an Android application built using Jetpack Compose. It allows use
 ### Detail View
 ![telegram-cloud-photo-size-4-5785378127067857295-y](https://github.com/user-attachments/assets/9e504c30-cf7f-48b6-98e9-6bbe32f66457)
 
-
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/FlickSearch.git
-
-
-FlickSearch/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── kotlin/
-│   │   │   │   ├── com.hometest.flicksearch/
-│   │   │   │   │   ├── data/          # Data Layer
-│   │   │   │   │   ├── domain/        # Domain Layer
-│   │   │   │   │   ├── ui/            # Presentation Layer
-│   │   │   │   │   │   ├── flicker/   # Flicker-specific UI
-│   │   │   │   │   │   ├── navigation # Navigation Components
-│   │   │   │   │   ├── MainActivity.kt
