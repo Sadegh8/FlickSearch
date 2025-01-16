@@ -14,10 +14,13 @@ import com.hometest.flicksearch.data.dto.FlickrImage
 import com.hometest.flicksearch.data.dto.Media
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import com.hometest.flicksearch.ui.flicker.components.Chip
@@ -32,8 +35,12 @@ fun FlickDetailsScreen(event: FlickrImage, modifier: Modifier = Modifier) {
             contentDescription = null,
             modifier = Modifier
                 .fillMaxWidth()
-                .wrapContentHeight()
+                .height(250.dp)
+                .clip(MaterialTheme.shapes.medium)
+                .padding(8.dp),
+            contentScale = ContentScale.Fit
         )
+
         StyledText(label = "Title:", value = event.title)
         StyledText(label = "Author:", value = extractAuthorName(event.author))
         StyledText(label = "Published:", value = formatToUserTime(event.published))

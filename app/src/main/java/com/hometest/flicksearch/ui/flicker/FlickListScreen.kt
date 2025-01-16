@@ -41,6 +41,7 @@ fun FlickListScreen(
             value = query.value,
             onValueChange = { newQuery ->
                 query.value = newQuery
+                onAction(FlickListAction.OnSearchQueryChanged(query.value))
             },
             label = { Text(text = "Search") },
             modifier = Modifier
@@ -60,8 +61,9 @@ fun FlickListScreen(
 
         when (uiState) {
             is FlickrUiState.Loading -> {
-                Box(modifier = Modifier.fillMaxSize().testTag("CircularProgressIndicator"), contentAlignment = Alignment.Center) {  }
-                CircularProgressIndicator(modifier = modifier)
+                Box(modifier = Modifier.fillMaxSize().testTag("CircularProgressIndicator"), contentAlignment = Alignment.Center) {
+                    CircularProgressIndicator(modifier = modifier)
+                }
             }
             is FlickrUiState.Success -> {
                 LazyVerticalGrid(columns = GridCells.Adaptive(128.dp), modifier = modifier) {
