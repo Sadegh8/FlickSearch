@@ -1,7 +1,7 @@
 package com.hometest.flicksearch.domain.usecases
-import com.hometest.flicksearch.data.FlickrRepository
 import com.hometest.flicksearch.data.dto.FlickrImage
 import com.hometest.flicksearch.data.dto.Media
+import com.hometest.flicksearch.domain.FlickrRepository
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi

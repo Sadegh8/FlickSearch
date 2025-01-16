@@ -1,7 +1,7 @@
 package com.hometest.flicksearch.di
 
-import com.hometest.flicksearch.data.FlickrRepository
 import com.hometest.flicksearch.data.FlickrRepositoryImpl
+import com.hometest.flicksearch.domain.FlickrRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
